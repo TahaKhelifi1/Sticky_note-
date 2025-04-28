@@ -1,0 +1,67 @@
+.notes-app {
+  display: flex;
+  width: 100%;
+  height: 100vh;
+
+  .btn-side{
+    display: none;
+    position: fixed;
+    top: 50%;
+    right:-5%;
+    transform: translateX(-50%);
+    z-index: 999;
+  }
+  // Sidebar Section
+  .sidebar-container {
+    flex: 1;
+    background: #f4f4f4;
+    border-right: 1px solid #ccc;
+  }
+
+  // Main Content Section
+  .main-content {
+    flex: 4; // Main content takes up remaining space
+    background: #fff;
+    padding: 20px;
+  }
+
+  .user-profile{
+    flex: 1; 
+    background: #eaeaea;
+    border-left: 1px solid #ccc;
+  }
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+
+    .btn-side{
+      display: block;
+    }
+
+    .sidebar {
+      flex: none;
+      height: auto;
+      border-right: none;
+      border-bottom: 1px solid #ccc;
+    }
+
+    .user-profile {
+      display: block;
+      position: absolute;
+      background-color: #ccc;
+      height: 100%;
+      margin-left: 100%;
+      transition: transform .2s ease-in-out;
+    }
+
+    .openProf{
+      transform: translateX(-100%);
+    }
+
+    .editor {
+      max-width: 100%;
+      overflow-y: auto;
+      height: 67vh;
+    }
+  }
+}

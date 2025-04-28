@@ -1,0 +1,46 @@
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    background: #034078;
+    color: #fff;
+    flex: 1;
+    .nav ul {
+      list-style: none;
+      display: flex;
+      gap: 1rem;
+  
+      li a {
+        color: #fff;
+        text-decoration: none;
+        position: relative;
+        &::before{
+          content: "";
+          width: 0%;
+          height: 2px;
+          background-color: #FEFCFB;
+          position: absolute;
+          bottom: -3px;
+          transition: all .3s ease-in-out;
+        }
+        &:hover::before{
+          width: 100%;
+        }
+      }
+  
+      .login-button {
+        background: #00aaff;
+        padding: 0.5rem 1rem;
+        border-radius: 5px;
+        &:hover {
+          background: #fff;
+          color: #006496;
+        }
+        &::before{
+          display: none;
+        }
+      }
+    }
+  }
+  

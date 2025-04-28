@@ -1,0 +1,145 @@
+.editor {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  background-color: #f8f9fa;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  flex-grow: 3; 
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  overflow-y: auto;
+  max-width: 70vw;
+  width: 100%;
+}
+
+.mode-buttons {
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 15px;
+
+  .edit-button,
+  .save-button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.3s ease;
+    font-weight: bold;
+  }
+
+  .btns{
+    display: flex;
+    width: 200px;
+    justify-content: space-around;
+  }
+  .edit-button {
+    background-color: #007bff;
+    color: white;
+    &:hover {
+      background-color: #0056b3;
+    }
+  }
+
+  .save-button {
+    background-color: #28a745;
+    color: white;
+    &:hover {
+      background-color: #218838;
+    }
+  }
+  .alone{
+    margin: 0 15px;
+  }
+
+  .delete-button {
+    background-color: #dc3545;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    font-weight: bold;
+  
+    &:hover {
+      background-color: #c82333;
+    }
+  
+    &:focus {
+      outline: none;
+    }
+  
+    &:active {
+      background-color: #bd2130;
+    }
+  }
+}
+
+.editor-content {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  gap: 20px;
+
+  .title-input {
+    padding: 12px;
+    font-size: 18px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #fff;
+    color: #333;
+    width: 100%;
+    box-sizing: border-box;
+    transition: border-color 0.3s ease;
+
+    &:focus {
+      border-color: #007bff;
+      outline: none;
+    }
+  }
+
+  .content-editor {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+    .ql-container {
+      height: 100%;
+      font-size: 16px;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      background-color: #fff;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+
+      .ql-editor {
+        padding: 15px;
+        line-height: 1.6;
+        color: #333;
+      }
+
+      .ql-toolbar {
+        border-bottom: 1px solid #ddd;
+        background-color: #f8f9fa;
+        padding: 10px;
+      }
+    }
+  }
+}
+
+.read-only-content {
+  overflow-y: auto;
+  h2 {
+    font-size: 22px;
+    margin-bottom: 10px;
+    color: #333;
+  }
+
+  .note-content {
+    font-size: 16px;
+    line-height: 1.6;
+    color: #555;
+  }
+}

@@ -1,0 +1,39 @@
+.sidebar {
+  padding: 20px;
+  background-color: #f9f9f9;
+  flex:1;
+
+  .add-note {
+    margin-bottom: 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    &:disabled{
+      background-color: #6c757d;
+      cursor: not-allowed;
+    }
+  }
+
+  .no-cursor{
+    display: none;
+  }
+  .note-list {
+    .note-item {
+      padding: 10px;
+      cursor: pointer;
+
+      &.active {
+        background-color: #007bff;
+        color: white;
+      } 
+    }
+  }
+  @media (max-width: 768px) {
+    .note-list {
+      max-height: 150px;
+      overflow-y: auto;
+    }
+  }
+}
